@@ -9,6 +9,7 @@ public class Board {
 	private ArrayList<String> guesses = new ArrayList<String>();
 	private int[] exactNumber;
 	private int[] correctNumber;
+   private char[] blank;
 	
 	//default constructor
 	public Board()
@@ -20,12 +21,17 @@ public class Board {
 	}
 	
 	//constructor, takes in number of guesses available
-	public Board(int l)
+	public Board(int l,int g)
 	{
 		length=l;
 		current=0;
 		exactNumber=new int[l];
 		correctNumber=new int[l];
+      blank=new char[g];
+      for(int x=0;x<g;x++)
+      {
+         blank[x]='-';
+      }
 	}
 	
 
@@ -37,7 +43,9 @@ public class Board {
 				System.out.println("|"+guesses.get(x)+"| Number of letters exactly right: " + exactNumber[x] +" Number of letters partially correct: "+ correctNumber[x]);
 			else
 			{
-				System.out.println("| ------ |");
+				System.out.print("|");
+				System.out.print(blank);
+				System.out.println("|");
 			}
 			
 		}

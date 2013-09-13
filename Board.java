@@ -26,7 +26,6 @@ public class Board {
 		current=0;
 		exactNumber=new int[l];
 		correctNumber=new int[l];
-		guesses.add("SJDL");
 	}
 	
 
@@ -34,11 +33,10 @@ public class Board {
 	{
 		for (int x=0;x<length;x++)
 		{
-			if(x<=current)
+			if(x<current)
 				System.out.println("|"+guesses.get(x)+"| Number of letters exactly right: " + exactNumber[x] +" Number of letters partially correct: "+ correctNumber[x]);
 			else
 			{
-				
 				System.out.println("| ------ |");
 			}
 			

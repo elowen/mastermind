@@ -1,6 +1,6 @@
 // this class takes the code and guesses from the users and compares each to conclude a score
 public class Get{
-	String code;
+	private String code;
 	// takes in the variable entered in by the codemaster
 	public Get(String n){
 
